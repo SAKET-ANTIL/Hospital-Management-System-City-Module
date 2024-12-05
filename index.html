@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citywide Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-hospital-symbol"></i> Citywide Hospital Management System</h1>
+        </header>
+
+        <!-- Multiple Hospital Sections -->
+        <div id="hospitalList"></div>
+
+        <!-- Add Patient Modal -->
+        <div id="patientModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Add Patient to <span id="currentHospital"></span></h3>
+                <form id="patientForm">
+                    <label for="patientName">Name:</label>
+                    <input type="text" id="patientName" required>
+                    <label for="patientAge">Age:</label>
+                    <input type="number" id="patientAge" required>
+                    <label for="patientCondition">Condition:</label>
+                    <textarea id="patientCondition" required></textarea>
+                    <label for="bedType">Bed Type:</label>
+                    <select id="bedType">
+                        <option value="OPD">OPD</option>
+                        <option value="ICU">ICU</option>
+                        <option value="General">General</option>
+                    </select>
+                    <button type="submit">Add to Queue</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
